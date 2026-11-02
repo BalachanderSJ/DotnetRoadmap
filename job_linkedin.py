@@ -1,0 +1,47 @@
+# -*- coding: utf-8 -*-
+
+def blocks():
+    return [
+        {"t": "h1", "text": "LinkedIn"},
+        {"t": "p", "text": "LinkedIn is the referral channel and the place global capability centers and product companies post senior roles. The Jobs tab is the feed. The hire happens when a recruiter or an engineer at the company opens your profile, or when an employee submits you. Build the profile, save two searches, and spend most of the hour on people."},
+        {"t": "h2", "text": "Open to work, recruiters only"},
+        {"t": "p", "text": "On your profile, open the Open to control and choose finding a new job. Set visibility to recruiters only. Add titles: Tech Lead, Technical Lead, Senior Software Engineer, Staff Software Engineer. Add the cities you will join, full-time, and a start date that matches your notice. Leave the public photo frame off while you are employed. Recruiters with a LinkedIn Recruiter seat can still find the private signal. Your coworkers will not see a green banner on your photo."},
+        {"t": "h2", "text": "Two searches to save"},
+        {"t": "p", "text": "Open Jobs. Paste one query into the keyword box. Set the location to a city you will join, or run a second pass with India and Remote. Set Date posted to Past week. Set Experience level to Mid-Senior. Some lead roles are tagged Director, so check that filter once a week as well. Set the workplace type to hybrid, on-site, or remote to match your floor. Sort by most recent. For the first pass, leave the Easy Apply filter off so you see posts that name a team and link to a career page."},
+        {"t": "h3", "text": "Tech lead query"},
+        {"t": "code", "text": "(\"Tech Lead\" OR \"Technical Lead\" OR \"Engineering Lead\" OR \"Staff Engineer\") AND (\".NET\" OR \"C#\" OR \"ASP.NET\") AND (Azure OR \"SQL Server\")"},
+        {"t": "h3", "text": "Senior engineer query"},
+        {"t": "p", "text": "Use this when the company pays lead money under a senior title."},
+        {"t": "code", "text": "(\"Senior Software Engineer\" OR \"Senior Engineer\" OR \"Staff Engineer\") AND (\".NET\" OR \"C#\") AND (Azure OR \"ASP.NET Core\")"},
+        {"t": "p", "text": "Save both searches and turn the alert on, daily. When the mail arrives, add the matches that clear your floor to the tracker the same day. A keyword search also works as plain text if the boolean form returns nothing: .NET Tech Lead Azure, then ASP.NET Core Senior Engineer."},
+        {"t": "h2", "text": "What to do with one posting"},
+        {"t": "b", "numbered": True, "items": [
+            "Read the description with the five-minute check in the pay section. Stop if the band or the city misses your floor.",
+            "Find the hiring company. Open People at that company. Filter to engineering, or to a title that contains recruiter or talent acquisition.",
+            "Apply on the company career page when the post links to one. LinkedIn Easy Apply is the path when you cannot find an employee and there is no career-page link.",
+            "Ask one engineer for a referral the same day, with the message below. A referral while the post is in its first week reaches the manager with the application.",
+        ]},
+        {"t": "h2", "text": "Notes you can send"},
+        {"t": "p", "text": "A free connection note is short, about 200 characters. Use the person's name. State stack, notice, and city. Skip a life story."},
+        {"t": "code", "text": "Hi Asha, I have 8 years in C#, ASP.NET Core, EF Core, and Azure. I am looking for a tech lead role. Notice is 30 days, Bengaluru hybrid. Happy to talk if you are hiring."},
+        {"t": "p", "text": "Referral ask, after they accept or if you already know them. Attach the job link yourself. Give them three lines they can paste."},
+        {"t": "code", "text": "I am applying for the .NET Tech Lead role (link). Three lines you can forward: 8 years on ASP.NET Core and Azure; I led a SQL change that cut p95 from 800 ms to 220 ms; I can join in 30 days. If you are comfortable referring me, I will send the resume."},
+        {"t": "p", "text": "Replace the metric with yours. Send the resume as the same PDF you uploaded everywhere else. If they do not reply in a week, leave it. One follow-up is enough. Move to the next person on the list."},
+        {"t": "h2", "text": "Who to message"},
+        {"t": "b", "items": [
+            "A recruiter or talent partner whose current company is the hiring company, and whose posts mention engineering.",
+            "An engineering manager on the stack you want. This is the strongest referral when they reply.",
+            "An engineer you studied or worked with. A specific job link makes the ask easy to forward.",
+            "Alumni filters help when you share a college or a past employer. Mention that in the first line.",
+        ]},
+        {"t": "p", "text": "Ten new notes a week, plus replies the same day, is enough alongside five applications. Connect with people you can speak to about a real role. A large connection count with no conversations does not change who calls you."},
+        {"t": "h2", "text": "Profile details that help this search"},
+        {"t": "b", "items": [
+            "Headline and About from the profile section. Featured can hold the resume PDF. Skip confidential design documents.",
+            "Experience bullets match the resume, including months and years.",
+            "Skills: pin ASP.NET Core, C#, Azure, SQL, and technical leadership. Colleagues can endorse later. The words matter more than the endorsement count.",
+            "Open to work preferences match the titles in your saved searches, so recruiter search and your own search point at the same seat.",
+        ]},
+        {"t": "note", "title": "When a recruiter messages you", "text": "Reply the same day with three facts: the title you want, your notice, and your city. Ask for the job description, the band, and whether the team is their own product or a client. Take the screen when the band can clear your floor. The interview section has the words for current CTC, expected CTC, and notice."},
+        {"t": "break"},
+    ]

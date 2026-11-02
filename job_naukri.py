@@ -1,0 +1,48 @@
+# -*- coding: utf-8 -*-
+
+def blocks():
+    return [
+        {"t": "h1", "text": "Naukri"},
+        {"t": "p", "text": "Naukri is the high-volume board. Services firms, capability centers, and consultancies search it every day. You get a call in two ways: you apply to a posted job, or a recruiter finds your profile in their resume database and writes or calls. The second path is where a complete profile matters. Recruiters filter by keywords, years of experience, city, current or expected salary, notice period, and how recently the profile was modified. Miss one filter and you are absent from that search."},
+        {"t": "h2", "text": "Fill the fields they filter on"},
+        {"t": "p", "text": "Open your profile and finish these. The resume file, the headline, and the employment text should match the LinkedIn story word for word on the stack and the metrics."},
+        {"t": "b", "items": [
+            "Resume headline: Tech Lead | C# ASP.NET Core | Azure SQL Server | 8 years.",
+            "Key skills: 15 to 30 skills from the profile section, copied from tech-lead job descriptions you would accept. Spell ASP.NET Core, C#, and SQL Server the way those posts spell them.",
+            "Summary: the same three lines as LinkedIn About, plus whether a notice buyout is realistic.",
+            "Employment: the same companies, titles, dates, and bullets as the resume.",
+            "Current salary: the real CTC. Expected salary: the lowest total you will actually discuss. A higher expected salary hides you from searches capped under that figure. A lower one fills the phone with roles under your floor. Explain the fixed and variable split on the call.",
+            "Notice period: the real number of days. Preferred work location: only cities you will join.",
+            "Attach the text PDF resume. A profile with no file looks unfinished to the person scanning results.",
+            "Set the profile visible to recruiters. Block your current employer so their recruiters do not open you.",
+        ]},
+        {"t": "p", "text": "Recruiter search can require all keywords, any keyword, or an exclude list. Synonyms do not save you. If they search ASP.NET Core and your profile only says web development, you do not appear. Put the precise tool names on the headline, the key skills, and the most recent role."},
+        {"t": "h2", "text": "Stay in the recently modified filter"},
+        {"t": "p", "text": "Recruiters prefer profiles that were updated recently, because a profile last touched eight months ago is often not looking. Make one true edit on weekday mornings: a metric you can now state, a skill reordered to match the roles you want this week, or the notice line. Save. Then apply. A fake keystroke is unnecessary when the resume is still gaining real bullets from the story bank."},
+        {"t": "h2", "text": "How to search jobs"},
+        {"t": "p", "text": "Use the keyword box with a title and the stack. Set experience so eight years sits inside the range, for example 6 to 12. Set location to your cities. Set a minimum salary at your floor so mass postings under that number drop out. Sort by date. Read Last 1 day and Last 3 days first, then Last 7 days."},
+        {"t": "code", "text": ".NET Tech Lead\nASP.NET Core Azure\nC# Technical Lead"},
+        {"t": "p", "text": "Run those as separate searches. Save an alert for each. Prefer a post from the hiring company's own recruiter when you recognize the brand. A consultancy post is worth a call when they will name the client and the CTC clears your floor. Apply in the first one or two days after the post goes up. Later applications sit under a large applicant count."},
+        {"t": "h2", "text": "The recruiter call"},
+        {"t": "p", "text": "Answer or reply the same day. Have your floor and your notice written in front of you. Ask these before you send more documents."},
+        {"t": "b", "numbered": True, "items": [
+            "Is this your company's product, or a client project? What is the client name?",
+            "What is the budget for fixed pay, and what is the variable?",
+            "What stack does the team ship this quarter?",
+            "How many rounds are there, and who sits on the panel?",
+            "Is there a bond, a buyout, or a training fee?",
+        ]},
+        {"t": "p", "text": "If they will not name the hiring company, end the call and write that in the tracker. If the fixed budget is under your floor, end the call. Send the standard resume only after the role is real. Several consultancies sometimes submit the same person to one client. If you already know the client name and you are in process through someone else, say so. A double submission can get the application rejected."},
+        {"t": "warn", "title": "Documents and fees", "text": "Send pay slips and identity documents to a named company during a real process. A first caller who demands Aadhaar, a fee, a training charge, or a laptop deposit is a stop. Naukri paid add-ons, including resume-writing upsells, are optional. Finish the free profile and a week of applications before you consider paying. A clearer headline changes who calls. A paid badge does not repair a vague one."},
+        {"t": "h2", "text": "Keywords that match this search"},
+        {"t": "p", "text": "Add these to skills and to the last role when they are true. Recruiters type them as all-keywords, meaning every word must appear."},
+        {"t": "table", "headers": ["They type", "You also keep the long form"], "rows": [
+            [".NET, C#", "ASP.NET Core, Web API"],
+            ["SQL", "SQL Server, Entity Framework Core"],
+            ["Azure", "App Service, Functions, or the service you actually run"],
+            ["Lead", "Tech Lead on the headline, and the team size in a bullet"],
+            ["Microservices", "Only if you can draw the boundary and the failure"],
+        ]},
+        {"t": "p", "text": "The interview section covers what you say when they ask current CTC, expected CTC, and notice. Those three answers should match the numbers stored on this profile."},
+        {"t": "break"},
+    ]

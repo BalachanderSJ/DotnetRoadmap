@@ -1,0 +1,53 @@
+# -*- coding: utf-8 -*-
+
+def blocks():
+    return [
+        {"t": "p", "text": "STUDY GUIDE", "size": 12, "bold": True, "center": True, "after": 4, "muted": True},
+        {"t": "p", "text": ".NET Tech Lead", "size": 28, "bold": True, "center": True, "after": 2},
+        {"t": "p", "text": "10-day deep dive with examples", "size": 18, "bold": True, "center": True, "after": 8},
+        {"t": "p", "text": "Backend Web API  ·  C#  ·  Entity Framework Core  ·  SQL Server", "size": 12, "center": True, "after": 2, "muted": True},
+        {"t": "p", "text": "Azure App Service  ·  Azure Functions  ·  Microservices  ·  Legacy migration", "size": 12, "center": True, "after": 10, "muted": True},
+        {"t": "p", "text": "Companion to the 10-day interview roadmap. The roadmap is the script you speak. This guide is the explanation and the worked example behind each topic.", "size": 12, "italic": True, "center": True, "after": 4},
+        {"t": "p", "text": "Prepared 30 October 2026. Examples target C# 14 on .NET 10 LTS, supported through 14 November 2028. .NET 8 and .NET 9 reach end of support in November 2026.", "size": 11, "center": True, "after": 6, "muted": True},
+        {"t": "h1", "text": "How to use this guide with the roadmap"},
+        {"t": "p", "text": "Read one topic until you can explain the example without looking. Then close the page and give the 90-second answer from the roadmap out loud. If you cannot reconstruct the example, you do not own the topic yet. If you can only recite the example, you are not ready for the follow-up. The follow-up is always the same shape: what breaks, who feels it, and what you would roll back."},
+        {"t": "b", "numbered": True, "items": [
+            "Read the explanation once, slowly, and trace the example with a finger or a pen.",
+            "Cover the code and write the important five lines from memory.",
+            "Speak the Say this box in under 90 seconds. Add the failure mode only if they ask.",
+            "On Day 10, use the rapid-fire miniatures as a check, then return to the full day when a miniature feels thin.",
+        ]},
+        {"t": "note", "title": "What this guide will not do", "text": "It will not invent Azure quotas, prices, or a latency number you should memorize. When a limit matters in the room, say which document or metric you would check. It will not replace your own incident stories. The Day 9 samples are scaffolds. Swap in your system, your number, and your decision."},
+        {"t": "h2", "text": "The running example"},
+        {"t": "p", "text": "Most examples are one system: an Orders API for a multi-tenant commerce backend. A partner can POST an order and retry. A customer can GET the order. A worker sends the confirmation email after the database commit. SQL Server or Azure SQL holds the order, the idempotency key, and the outbox row. The API runs on Azure App Service. The email worker is an Azure Function on the isolated worker model, triggered by Azure Service Bus. The user's token comes from Microsoft Entra ID. The process reaches Azure SQL with a managed identity."},
+        {"t": "p", "text": "Scale you may assume out loud, and you must label it as an assumption: about 50 requests a second at peak, about 2 million orders a year, p95 under 300 milliseconds for the read, email within a minute. If they change the number, change the design. A million events a second is a different system."},
+        {"t": "h2", "text": "Answer shape, with the example attached"},
+        {"t": "b", "numbered": True, "items": [
+            "First sentence: the decision or the definition.",
+            "Second beat: the Orders example, in ASP.NET Core, EF Core, SQL, or Azure.",
+            "Third beat: the tradeoff, with a number if you measured one.",
+            "Stop. The lead point is the team rule, the review check, or the production scar.",
+        ]},
+        {"t": "table", "headers": ["Day", "You will be able to teach"], "rows": [
+            ["1", "Memory, LINQ, equality, disposal, and async, each with a snippet you can write."],
+            ["2", "SOLID and the patterns you would keep, plus the ones you would delete."],
+            ["3", "The Web API pipeline, auth, status codes, idempotency, and a PR review."],
+            ["4", "Tracking, N+1, migrations, concurrency, and the moment you drop to SQL."],
+            ["5", "A plan, an index, locking, and the login the app is allowed to use."],
+            ["6", "A host, a slot strategy, identity, and a poison-message path."],
+            ["7", "A boundary, a message, an outbox, and a failure the user can see."],
+            ["8", "A strangler plan a manager can fund, including rollback."],
+            ["9", "Two designs on paper and the shape of a lead story."],
+            ["10", "90-second answers, rapid fire, and the questions you ask them."],
+        ]},
+        {"t": "h2", "text": "Stack to keep stable while you study"},
+        {"t": "b", "items": [
+            "Language and runtime: C# 14 on .NET 10. New work targets the LTS line.",
+            "API: ASP.NET Core. Controllers when the team is large and the surface is wide. Minimal APIs when the service is small and the team has agreed.",
+            "Data: EF Core for the aggregate. SQL for the hot query. SQL Server or Azure SQL.",
+            "Hosting: App Service for the request API. Azure Functions isolated worker for event and schedule work.",
+            "Messaging: Azure Service Bus when the consumer must complete the message under a lock.",
+            "Identity: Entra ID for the user. Managed identity for the process. A separate identity for migrations.",
+        ]},
+        {"t": "break"},
+    ]

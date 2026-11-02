@@ -1,0 +1,57 @@
+# -*- coding: utf-8 -*-
+
+def blocks():
+    return [
+        {"t": "p", "text": "STUDY GUIDE", "size": 12, "bold": True, "center": True, "muted": True},
+        {"t": "p", "text": ".NET Tech Lead", "size": 28, "bold": True, "center": True},
+        {"t": "p", "text": "DSA in C# and system design", "size": 18, "bold": True, "center": True},
+        {"t": "p", "text": "Coding screen  ·  Whiteboard  ·  ASP.NET Core  ·  Azure SQL  ·  Service Bus", "size": 12, "center": True, "muted": True},
+        {"t": "p", "text": "For a developer with about 8 years of .NET who is moving into a tech-lead interview and needs a practical DSA refresh in C#.", "size": 12, "italic": True, "center": True},
+        {"t": "p", "text": "Prepared 31 October 2026. Examples target C# 14 on .NET 10 LTS, supported through 14 November 2028. This is a companion to the 10-day roadmap, the deep dive, and the 20-day pipeline and MVC guide.", "size": 11, "center": True, "muted": True},
+
+        {"t": "h1", "text": "How this guide sits with the others"},
+        {"t": "p", "text": "You already have a spoken script and a worked example for the backend you have shipped. The 10-day roadmap is that script: C#, SOLID, the Web API, EF Core, SQL, Azure App Service and Functions, service boundaries, migration, and a leadership mock. The deep dive is the explanation behind the script. The 20-day pipeline and MVC guide is the longer pass over middleware, filters, model binding, and how a controller action actually runs. This PDF is the other two rooms."},
+        {"t": "p", "text": "Part A is the coding screen. You get a shared editor, a problem you have seen the shape of, and a person watching how you clarify, test, and talk about complexity. It is a practical refresh in C#, using List, Dictionary, HashSet, Queue, Stack, and PriorityQueue. It is not a competitive-programming camp, and it is not a beginner tutorial. You will not study segment trees. You will finish a correct solution, name the cost, and hit the C# mistakes that show up when an eight-year developer is rusty."},
+        {"t": "p", "text": "Part B is the whiteboard. You design a .NET backend out loud in about 20 minutes, and on the last day you hold a 45-minute mock. The stack is the one you already speak: ASP.NET Core, EF Core, SQL Server or Azure SQL, Azure App Service, Azure Functions on the isolated worker, Azure Service Bus, Microsoft Entra ID, and managed identity. When a design needs a second deployable, you name the boundary and stop. The microservices chapter in the roadmap and the deep dive is where you practice the cut. This guide does not teach that chapter again."},
+        {"t": "table", "headers": ["Guide", "Room it prepares", "What you do with it"], "rows": [
+            ["10-day roadmap", "The conversation", "90-second answers, stories, and the stack you name."],
+            ["Deep dive", "The follow-up", "The worked example behind each roadmap day."],
+            ["20-day pipeline and MVC", "The request path", "Middleware, filters, binding, and the action."],
+            ["This PDF, Part A", "The coding screen", "Ten patterns in C#, each with a drill."],
+            ["This PDF, Part B", "The whiteboard", "Ten designs, anchored on the order API."],
+        ]},
+        {"t": "note", "title": "Numbers in this guide", "text": "Where a number is a load or a latency target, it is an assumption you say out loud so the panel can correct it. The running order system assumes about 50 requests a second at peak, about 2 million orders a year, a read p95 under 300 milliseconds, and email within a minute. Other days label their own assumptions. Nothing in here is an Azure quota, a price, or a SKU limit. When a platform limit would change the design, say which document you would open."},
+        {"t": "h2", "text": "How to spend a day"},
+        {"t": "p", "text": "Each day is about 3.5 hours. Reading the page quietly does not change the interview. Part A wants the code in your hands. Part B wants the design on paper, then spoken against a clock."},
+        {"t": "b", "numbered": True, "items": [
+            "Part A: trace the worked example, close the page, write it from memory, then write the variant.",
+            "Say the complexity and the C# pitfall before you look back.",
+            "Speak the Say this box in under 90 seconds.",
+            "Part B: draw the spine, write the sketch, then give the 20-minute version twice.",
+            "Keep a console project on the runtime you will interview in. A single file and a Main method are enough.",
+        ]},
+        {"t": "h2", "text": "The twenty days"},
+        {"t": "table", "headers": ["Day", "Part A — coding screen", "Part B — whiteboard"], "rows": [
+            ["1", "Arrays, strings, hash maps", "The design spine"],
+            ["2", "Two pointers and sliding window", "The order API, taught fully"],
+            ["3", "Stack and queue", "Catalog reads and order writes"],
+            ["4", "Linked lists", "Nightly million-row ingest"],
+            ["5", "Binary search", "Multi-tenant SaaS"],
+            ["6", "Trees and BST", "Notification fan-out"],
+            ["7", "Heaps and PriorityQueue", "Rate limiting and the public gateway"],
+            ["8", "Graphs", "A URL shortener"],
+            ["9", "Recursion and backtracking", "Realtime order status"],
+            ["10", "Dynamic programming, and how you talk", "A 45-minute mock"],
+        ]},
+        {"t": "h2", "text": "C# pitfalls you will hit in the room"},
+        {"t": "p", "text": "These five show up across the ten days. Name the one that applies before the interviewer does."},
+        {"t": "table", "headers": ["Pitfall", "What it looks like", "What you do"], "rows": [
+            ["int overflow", "A sum, a midpoint, or a Fibonacci total wraps in the default unchecked context.", "Use long for sums and running totals. Compute a midpoint as lo + (hi - lo) / 2."],
+            ["Missing dictionary key", "dict[key] or dict[key]++ throws KeyNotFoundException.", "TryGetValue, GetValueOrDefault, or HashSet.Add."],
+            ["Unstable sort", "Array.Sort and List<T>.Sort may reorder equal keys.", "Keep the payload inside the sorted item. When ties must keep input order, use LINQ OrderBy, which is stable."],
+            ["Recursion depth", "A skewed tree, a long linked list, or a deep graph DFS throws StackOverflowException. C# does not promise tail-call elimination.", "Write the loop or an explicit Stack when the input can be deep. Subsets of a small n are fine."],
+            ["Off-by-one", "A window length, a half-open range, or a binary-search bound is one slot wrong.", "Say the invariant out loud. Window length is right - left + 1. A half-open range is [lo, hi)."],
+        ]},
+        {"t": "lead", "title": "Say this", "text": "I treat the coding screen as a C# problem with a complexity I can defend, and the whiteboard as a .NET service with a transaction, a failure, and a rollback. I label every load number as an assumption. I do not invent an Azure quota."},
+        {"t": "break"},
+    ]
